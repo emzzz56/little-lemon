@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -86,4 +88,15 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-rxjava2")
     implementation("androidx.navigation:navigation-compose:2.5.3")
     implementation ("com.google.code.gson:gson:2.8.8")
+    implementation ("io.ktor:ktor-client-core:2.1.3")
+    implementation ("io.ktor:ktor-client-android:2.1.3")
+    implementation ("io.ktor:ktor-client-content-negotiation:2.1.3")
+    implementation ("io.ktor:ktor-serialization-kotlinx-json:2.1.3")
+    implementation("androidx.room:room-runtime:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
+    implementation ("androidx.room:room-runtime:2.4.3")
+    annotationProcessor("androidx.room:room-compiler:2.4.3")
+    implementation ("androidx.room:room-ktx:2.4.3")
+    implementation ("androidx.compose.runtime:runtime-livedata:1.3.2")
+
 }
